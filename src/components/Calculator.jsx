@@ -29,7 +29,7 @@ const Calculator = () => {
         <div className="calc-button">
           <button>9</button>
         </div>
-        <div className="calc-button-operator">
+        <div className="calc-button-operator del">
           <button>DEL</button>
         </div>
         <div className="calc-button">
@@ -68,10 +68,10 @@ const Calculator = () => {
         <div className="calc-button-operator">
           <button>X</button>
         </div>
-        <div className="calc-button-operator">
+        <div className="bottom">
           <button>RESET</button>
         </div>
-        <div className="calc-button-operator">
+        <div className="bottom">
           <button>=</button>
         </div>
       </div>
