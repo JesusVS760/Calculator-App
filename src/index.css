@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  font-size: 16px;
+
+  /*  Theme 1 */
+
+  --backgroundTheme1: hsl(222, 26%, 31%);
+  --toggleBackgroundTheme1: hsl(223, 31%, 20%);
+  --screenTheme1: hsl(224, 36%, 15%);
+
+  --key1DesDarkBlueBackground: hsl(225, 21%, 49%);
+  --key1DesdarkBlueShadow: hsl(224, 28%, 35%);
+
+  /*Theme One Keys */
+  --key1Red: hsl(6, 63%, 50%);
+  --key1DarkRed: hsl(6, 70%, 34%);
+
+  --key1GrayOrangeBackground: hsl(30, 25%, 89%);
+  --key1GrayOrange: hsl(28, 16%, 65%);
+
+  /*Theme One Text */
+  --text1VeryDarkGrayBlue: hsl(221, 14%, 31%);
+
+  /*  Theme 2 */
+  --backgroundTheme2LightGray: hsl(0, 0%, 90%);
+  --backgroundTheme2GrayRed: hsl(0, 5%, 81%);
+  --backgroundTheme2VeryLightRed: hsl(0, 0%, 93%);
+
+  /*Theme Two Keys */
+
+  --key2DarkModerateCyanBackground: hsl(185, 42%, 37%);
+  --key2verydarkcyanshadow: hsl(185, 58%, 25%);
+
+  --key2Orange: hsl(25, 98%, 40%);
+  --key2DarkOrange: hsl(25, 99%, 27%);
+
+  --key2LightGrayYellow: hsl(45, 7%, 89%);
+  --key2DarkGrayOrange: hsl(35, 11%, 61%);
+
+  /*Theme One Text */
+
+  --text2DarkGrayishYellow: hsl(60, 10%, 19%);
+
+  /*  Theme 3 */
+
+  --backgroundTheme3VeryDarkViolet: hsl(268, 75%, 9%);
+  --backgroundToggleTheme3DarkViolet: hsl(268, 71%, 12%);
+
+  /*  Theme Three Keys */
+
+  --key3DarkViolet: hsl(281, 89%, 26%);
+  --key3VividMagenta: hsl(285, 91%, 52%);
+
+  --key3PurCyan: hsl(176, 100%, 44%);
+  --key3SoftCyan: hsl(177, 92%, 70%);
+
+  --key3VeryDarkViolet: hsl(268, 47%, 21%);
+  --key3DarMagenta: hsl(290, 70%, 36%);
+
+  /*  Theme Three Text */
+
+  --text3LightYellow: hsl(52, 100%, 62%);
+  --text3VeryDarkBlue: hsl(198, 20%, 13%);
+}
