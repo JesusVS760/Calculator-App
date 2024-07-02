@@ -71,10 +71,10 @@ const Calculator = () => {
           </div>
         </div>
         <div className="calc-buttom-ops">
-          <div className="bottom">
+          <div className="bottom reset">
             <button>RESET</button>
           </div>
-          <div className="bottom">
+          <div className="bottom equals">
             <button>=</button>
           </div>
         </div>

@@ -51,14 +51,22 @@ input {
   padding: 15px 5px;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text1VeryDarkGrayBlue);
+  box-shadow: 0 2px 4px var(--key1DesdarkBlueShadow);
 }
 .calc-button-operator button {
   width: 100px;
   padding: 15px 5px;
   border-radius: 10px;
+  font-weight: 800;
+  color: var(--text1VeryDarkGrayBlue);
   font-size: 1.5rem;
   cursor: pointer;
+}
+.del button {
+  padding: 18px 5px;
 }
 .bottom {
   display: flex;
@@ -89,4 +97,17 @@ input {
   padding: 20px 10px;
   border-radius: 10px;
   background: var(--toggleBackgroundTheme1);
+}
+.equals button {
+  background: var(--key1Red);
+  color: white;
+}
+.del button,
+.reset button {
+  background-color: var(--key1DesDarkBlueBackground);
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-weight: 700;
 }
