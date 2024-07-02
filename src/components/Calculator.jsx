@@ -19,60 +19,64 @@ const Calculator = () => {
       <div className="calc-amt">
         <input type="text" />
       </div>
-      <div className="calc-options">
-        <div className="calc-button">
-          <button>7</button>
+      <div className="calc-keyboard">
+        <div className="calc-options">
+          <div className="calc-button">
+            <button>7</button>
+          </div>
+          <div className="calc-button">
+            <button>8</button>
+          </div>
+          <div className="calc-button">
+            <button>9</button>
+          </div>
+          <div className="calc-button-operator del">
+            <button>DEL</button>
+          </div>
+          <div className="calc-button">
+            <button>4</button>
+          </div>
+          <div className="calc-button">
+            <button>5</button>
+          </div>
+          <div className="calc-button">
+            <button>6</button>
+          </div>
+          <div className="calc-button-operator">
+            <button>+</button>
+          </div>
+          <div className="calc-button">
+            <button>1</button>
+          </div>
+          <div className="calc-button">
+            <button>2</button>
+          </div>
+          <div className="calc-button">
+            <button>3</button>
+          </div>
+          <div className="calc-button-operator">
+            <button>-</button>
+          </div>
+          <div className="calc-button-operator">
+            <button>.</button>
+          </div>
+          <div className="calc-button">
+            <button>0</button>
+          </div>
+          <div className="calc-button-operator">
+            <button>/</button>
+          </div>
+          <div className="calc-button-operator">
+            <button>X</button>
+          </div>
         </div>
-        <div className="calc-button">
-          <button>8</button>
-        </div>
-        <div className="calc-button">
-          <button>9</button>
-        </div>
-        <div className="calc-button-operator del">
-          <button>DEL</button>
-        </div>
-        <div className="calc-button">
-          <button>4</button>
-        </div>
-        <div className="calc-button">
-          <button>5</button>
-        </div>
-        <div className="calc-button">
-          <button>6</button>
-        </div>
-        <div className="calc-button-operator">
-          <button>+</button>
-        </div>
-        <div className="calc-button">
-          <button>1</button>
-        </div>
-        <div className="calc-button">
-          <button>2</button>
-        </div>
-        <div className="calc-button">
-          <button>3</button>
-        </div>
-        <div className="calc-button-operator">
-          <button>-</button>
-        </div>
-        <div className="calc-button-operator">
-          <button>.</button>
-        </div>
-        <div className="calc-button">
-          <button>0</button>
-        </div>
-        <div className="calc-button-operator">
-          <button>/</button>
-        </div>
-        <div className="calc-button-operator">
-          <button>X</button>
-        </div>
-        <div className="bottom">
-          <button>RESET</button>
-        </div>
-        <div className="bottom">
-          <button>=</button>
+        <div className="calc-buttom-ops">
+          <div className="bottom">
+            <button>RESET</button>
+          </div>
+          <div className="bottom">
+            <button>=</button>
+          </div>
         </div>
       </div>
     </div>
