@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Calculator.css";
 
 const Calculator = () => {
+  const [option, setOption] = useState(0);
+  function handleClick(sliderValue) {
+    setOption(sliderValue);
+  }
+
   return (
     <div className="calc-container">
       <div className="calc-header">
@@ -14,13 +19,19 @@ const Calculator = () => {
           </div>
           <div className="calc-theme-slider">
             <div className="slider-opt">
-              <p>1</p>
-              <p>2</p>
-              <p>3</p>
+              <p onClick={() => handleClick(0)}>1</p>
+              <p onClick={() => handleClick(1)}>2</p>
+              <p onClick={() => handleClick(2)}>3</p>
             </div>
             <div className="input-slider">
               {" "}
-              <input className="slider" type="range" min="0" max="2" />
+              <input
+                className="slider"
+                value={option}
+                type="range"
+                min="0"
+                max="2"
+              />
             </div>
           </div>
         </div>
