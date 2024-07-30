@@ -9,10 +9,19 @@ const Calculator = () => {
           <h3>Calc</h3>
         </div>
         <div className="calc-themes">
-          <p>Theme</p>
+          <div className="theme-text">
+            <p>Theme</p>
+          </div>
           <div className="calc-theme-slider">
-            <span>1 2 3</span>
-            <div></div>
+            <div className="slider-opt">
+              <p>1</p>
+              <p>2</p>
+              <p>3</p>
+            </div>
+            <div>
+              {" "}
+              <input className="slider" type="range" min="0" max="2" />
+            </div>
           </div>
         </div>
       </div>

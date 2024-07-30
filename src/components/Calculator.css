@@ -13,12 +13,17 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  gap: 380px;
+  gap: 265px;
+  /* gap: 380px; */
+  max-width: 500px;
 }
 .calc-header-title {
+  /* margin-right: auto; */
 }
 .calc-themes {
   display: flex;
+  align-items: center;
+  gap: 15px;
 }
 .calc-options {
   display: grid;
@@ -110,4 +115,19 @@ input {
   outline: none;
   border: none;
   font-weight: 700;
+}
+.calc-theme-slider {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+
+  /* margin-right: 10px; */
+}
+.slider-opt {
+  display: flex;
+  gap: 15px;
+}
+.slider-opt p {
+  cursor: pointer;
 }
