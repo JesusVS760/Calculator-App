@@ -18,7 +18,7 @@ const Calculator = () => {
               <p>2</p>
               <p>3</p>
             </div>
-            <div>
+            <div className="input-slider">
               {" "}
               <input className="slider" type="range" min="0" max="2" />
             </div>

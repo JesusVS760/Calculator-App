@@ -13,7 +13,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  gap: 265px;
+  gap: 300px;
   /* gap: 380px; */
   max-width: 500px;
 }
@@ -126,8 +126,13 @@ input {
 }
 .slider-opt {
   display: flex;
-  gap: 15px;
+  gap: 27px;
 }
 .slider-opt p {
   cursor: pointer;
+}
+.input-slider input {
+  max-width: 90px;
+}
+.slider {
 }
