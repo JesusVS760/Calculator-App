@@ -12,6 +12,9 @@ const Calculator = () => {
     setComp((prevValue) => prevValue + textToAppend);
   }
 
+  function handleDelete() {
+    setComp((prevValue) => prevValue.slice(0, -1));
+  }
   return (
     <div className="calc-container">
       <div className="calc-header">
@@ -60,7 +63,7 @@ const Calculator = () => {
             <button onClick={() => handleComp(9)}>9</button>
           </div>
           <div className="calc-button-operator del">
-            <button>DEL</button>
+            <button onClick={handleDelete}>DEL</button>
           </div>
           <div className="calc-button">
             <button onClick={() => handleComp(4)}>4</button>
