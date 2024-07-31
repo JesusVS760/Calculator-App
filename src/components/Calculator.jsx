@@ -6,6 +6,11 @@ const Calculator = () => {
   function handleClick(sliderValue) {
     setOption(sliderValue);
   }
+  const [comp, setComp] = useState("");
+
+  function handleComp(textToAppend) {
+    setComp((prevValue) => prevValue + textToAppend);
+  }
 
   return (
     <div className="calc-container">
@@ -37,42 +42,46 @@ const Calculator = () => {
         </div>
       </div>
       <div className="calc-amt">
-        <input type="text" />
+        <input
+          type="text"
+          value={comp}
+          onChange={(e) => setComp(e.target.value)}
+        />
       </div>
       <div className="calc-keyboard">
         <div className="calc-options">
           <div className="calc-button">
-            <button>7</button>
+            <button onClick={() => handleComp(7)}>7</button>
           </div>
           <div className="calc-button">
-            <button>8</button>
+            <button onClick={() => handleComp(8)}>8</button>
           </div>
           <div className="calc-button">
-            <button>9</button>
+            <button onClick={() => handleComp(9)}>9</button>
           </div>
           <div className="calc-button-operator del">
             <button>DEL</button>
           </div>
           <div className="calc-button">
-            <button>4</button>
+            <button onClick={() => handleComp(4)}>4</button>
           </div>
           <div className="calc-button">
-            <button>5</button>
+            <button onClick={() => handleComp(5)}>5</button>
           </div>
           <div className="calc-button">
-            <button>6</button>
+            <button onClick={() => handleComp(6)}>6</button>
           </div>
           <div className="calc-button-operator">
             <button>+</button>
           </div>
           <div className="calc-button">
-            <button>1</button>
+            <button onClick={() => handleComp(1)}>1</button>
           </div>
           <div className="calc-button">
-            <button>2</button>
+            <button onClick={() => handleComp(2)}>2</button>
           </div>
           <div className="calc-button">
-            <button>3</button>
+            <button onClick={() => handleComp(3)}>3</button>
           </div>
           <div className="calc-button-operator">
             <button>-</button>
@@ -81,7 +90,7 @@ const Calculator = () => {
             <button>.</button>
           </div>
           <div className="calc-button">
-            <button>0</button>
+            <button onClick={() => handleComp(0)}>0</button>
           </div>
           <div className="calc-button-operator">
             <button>/</button>
