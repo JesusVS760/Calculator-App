@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import "./Calculator.css";
 
 const Calculator = () => {
+  //once done reorganize code
   const [option, setOption] = useState(0);
+  const [result, setResult] = useState(0);
+  const [comp, setComp] = useState("");
+
   function handleClick(sliderValue) {
     setOption(sliderValue);
   }
-  const [comp, setComp] = useState("");
-
   function handleComp(textToAppend) {
     setComp((prevValue) => prevValue + textToAppend);
   }
@@ -15,6 +17,29 @@ const Calculator = () => {
   function handleDelete() {
     setComp((prevValue) => prevValue.slice(0, -1));
   }
+
+  const value = parseFloat(option);
+
+  function handleOperation(operation) {
+    switch (operation) {
+      case "+":
+        setResult(result + value);
+        break;
+      case "-":
+        setResult(result - value);
+        break;
+      case "X":
+        setResult(result * value);
+        break;
+      case "/":
+        setResult(result / value);
+        break;
+      default:
+        break;
+    }
+    setComp(""); // resetting after computation
+  }
+
   return (
     <div className="calc-container">
       <div className="calc-header">
@@ -75,7 +100,7 @@ const Calculator = () => {
             <button onClick={() => handleComp(6)}>6</button>
           </div>
           <div className="calc-button-operator">
-            <button>+</button>
+            <button onClick={(e) => handleOperation(e.target.value)}>+</button>
           </div>
           <div className="calc-button">
             <button onClick={() => handleComp(1)}>1</button>
@@ -87,7 +112,7 @@ const Calculator = () => {
             <button onClick={() => handleComp(3)}>3</button>
           </div>
           <div className="calc-button-operator">
-            <button>-</button>
+            <button onClick={(e) => handleOperation(e.target.value)}>-</button>
           </div>
           <div className="calc-button-operator">
             <button>.</button>
@@ -96,10 +121,10 @@ const Calculator = () => {
             <button onClick={() => handleComp(0)}>0</button>
           </div>
           <div className="calc-button-operator">
-            <button>/</button>
+            <button onClick={(e) => handleOperation(e.target.value)}>/</button>
           </div>
           <div className="calc-button-operator">
-            <button>X</button>
+            <button onClick={(e) => handleOperation(e.target.value)}>X</button>
           </div>
         </div>
         <div className="calc-buttom-ops">
@@ -107,7 +132,7 @@ const Calculator = () => {
             <button>RESET</button>
           </div>
           <div className="bottom equals">
-            <button>=</button>
+            <button>{result} =</button>
           </div>
         </div>
       </div>
