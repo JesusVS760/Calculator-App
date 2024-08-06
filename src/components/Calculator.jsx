@@ -12,11 +12,17 @@ const Calculator = () => {
   }
 
   function handleDelete() {
-    setComp((prevValue) => prevValue.slice(0, -1));
+    if (displayResult) {
+      // Reset display when the result is shown
+      setComp("");
+      setDisplayResult(false);
+    } else {
+      // Remove the last character from the input
+      setComp((prevValue) => prevValue.slice(0, -1));
+    }
   }
 
   function handleOperation(operation) {
-    // If there's an existing operation, calculate the result
     if (currentOperation && comp) {
       const value = parseFloat(comp);
       if (!isNaN(value)) {
@@ -47,29 +53,8 @@ const Calculator = () => {
   }
 
   function handleEquals() {
-    if (currentOperation && comp) {
-      const value = parseFloat(comp);
-      if (!isNaN(value)) {
-        switch (currentOperation) {
-          case "+":
-            setResult(result + value);
-            break;
-          case "-":
-            setResult(result - value);
-            break;
-          case "X":
-            setResult(result * value);
-            break;
-          case "/":
-            setResult(result / value);
-            break;
-          default:
-            break;
-        }
-      }
-      setComp(""); // Clear input after computing
-      setCurrentOperation(null); // Reset the operation
-      setDisplayResult(true); // Display the result
+    if (comp) {
+      handleOperation(comp);
     }
   }
 
