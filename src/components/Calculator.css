@@ -7,6 +7,26 @@
   padding: 15px;
   border-radius: 10px;
 }
+.calc-container-opt-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 10px;
+  background: var(--backgroundTheme2LightGray);
+}
+
+.calc-container-opt-3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 10px;
+  background: var(--backgroundTheme3VeryDarkViolet);
+}
+
 .calc-header {
   color: white;
   display: flex;

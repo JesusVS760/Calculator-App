@@ -1,12 +1,28 @@
 import React, { useState } from "react";
 import "./Calculator.css";
 
-const Calculator = () => {
+const Calculator = ({ onSendBackground }) => {
   const [comp, setComp] = useState(""); // Input and current operation
   const [result, setResult] = useState(null); // To store the final result
   const [currentOperation, setCurrentOperation] = useState(null); // Track the current operation
   const [displayResult, setDisplayResult] = useState(false); // Track if we should display the result
   const [slider, setSlider] = useState(0);
+
+  //used for callback function
+
+  const changeBackground = (backgroundReceived) => {
+    if (backgroundReceived == 0) {
+      let background = "app-container";
+      onSendBackground(background); // call the callback function with background data
+    } else if (backgroundReceived == 1) {
+      let background = "app-container-2";
+      onSendBackground(background); // call the callback function with background data
+    } else {
+      let background = "app-container-3";
+      onSendBackground(background); // call the callback function with background data
+    }
+  };
+
   function handleComp(textToAppend) {
     setComp((prevValue) => prevValue + textToAppend);
   }
@@ -66,6 +82,7 @@ const Calculator = () => {
   function handleSliderChange(value) {
     // const [slider, setSlider] = useState(0);
     setSlider(value);
+    changeBackground(value);
   }
 
   return (
@@ -81,7 +98,7 @@ const Calculator = () => {
           <div className="calc-theme-slider">
             <div className="slider-opt">
               <p onClick={() => handleSliderChange(0)}>1</p>
-              <p onClick={() => handleSliderChange(1)}>2</p>
+              <p onClick={changeBackground}>2</p>
               <p onClick={() => handleSliderChange(2)}>3</p>
             </div>
             <div className="input-slider">

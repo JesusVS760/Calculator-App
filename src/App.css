@@ -5,3 +5,17 @@
   height: 100vh;
   background: var(--backgroundTheme1);
 }
+.app-container-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: var(--backgroundTheme2LightGray);
+}
+.app-container-3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: var(--backgroundTheme3VeryDarkViolet);
+}
