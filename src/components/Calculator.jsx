@@ -6,7 +6,7 @@ const Calculator = () => {
   const [result, setResult] = useState(null); // To store the final result
   const [currentOperation, setCurrentOperation] = useState(null); // Track the current operation
   const [displayResult, setDisplayResult] = useState(false); // Track if we should display the result
-
+  const [slider, setSlider] = useState(0);
   function handleComp(textToAppend) {
     setComp((prevValue) => prevValue + textToAppend);
   }
@@ -50,12 +50,11 @@ const Calculator = () => {
       setComp(""); // Clear input after the operation
     }
     setCurrentOperation(operation); // Set the current operation
+    setDisplayResult(true);
   }
 
   function handleEquals() {
-    if (comp) {
-      handleOperation(comp);
-    }
+    handleOperation(comp);
   }
 
   function handleReset() {
@@ -63,6 +62,10 @@ const Calculator = () => {
     setResult(null);
     setDisplayResult(false);
     setCurrentOperation(null);
+  }
+  function handleSliderChange(value) {
+    // const [slider, setSlider] = useState(0);
+    setSlider(value);
   }
 
   return (
@@ -77,12 +80,19 @@ const Calculator = () => {
           </div>
           <div className="calc-theme-slider">
             <div className="slider-opt">
-              <p onClick={() => handleClick(0)}>1</p>
-              <p onClick={() => handleClick(1)}>2</p>
-              <p onClick={() => handleClick(2)}>3</p>
+              <p onClick={() => handleSliderChange(0)}>1</p>
+              <p onClick={() => handleSliderChange(1)}>2</p>
+              <p onClick={() => handleSliderChange(2)}>3</p>
             </div>
             <div className="input-slider">
-              <input className="slider" type="range" min="0" max="2" readOnly />
+              <input
+                className="slider"
+                value={slider}
+                type="range"
+                min="0"
+                max="2"
+                readOnly
+              />
             </div>
           </div>
         </div>
@@ -150,9 +160,7 @@ const Calculator = () => {
             <button onClick={handleReset}>RESET</button>
           </div>
           <div className="bottom equals">
-            <button onClick={handleEquals}>
-              {result !== null ? result : ""} ={" "}
-            </button>
+            <button onClick={handleEquals}>=</button>
           </div>
         </div>
       </div>
