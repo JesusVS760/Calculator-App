@@ -80,7 +80,6 @@ const Calculator = ({ onSendData }) => {
     setCurrentOperation(null);
   }
   function handleSliderChange(value) {
-    // const [slider, setSlider] = useState(0);
     setSlider(value);
     changeBackground(value);
   }
@@ -119,6 +118,7 @@ const Calculator = ({ onSendData }) => {
           type="text"
           value={displayResult ? result : comp}
           onChange={(e) => setComp(e.target.value)}
+          disabled
         />
       </div>
       <div className="calc-keyboard">
