@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Calculator.css";
 
-const Calculator = ({ onSendBackground }) => {
+const Calculator = ({ onSendData }) => {
   const [comp, setComp] = useState(""); // Input and current operation
   const [result, setResult] = useState(null); // To store the final result
   const [currentOperation, setCurrentOperation] = useState(null); // Track the current operation
@@ -11,15 +11,15 @@ const Calculator = ({ onSendBackground }) => {
   //used for callback function
 
   const changeBackground = (backgroundReceived) => {
-    if (backgroundReceived == 0) {
+    if (backgroundReceived === 0) {
       let background = "app-container";
-      onSendBackground(background); // call the callback function with background data
-    } else if (backgroundReceived == 1) {
+      onSendData(background); // call the callback function with background data
+    } else if (backgroundReceived === 2) {
       let background = "app-container-2";
-      onSendBackground(background); // call the callback function with background data
+      onSendData(background); // call the callback function with background data
     } else {
       let background = "app-container-3";
-      onSendBackground(background); // call the callback function with background data
+      onSendData(background); // call the callback function with background data
     }
   };
 
