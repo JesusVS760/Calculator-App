@@ -25,6 +25,8 @@
   padding: 15px;
   border-radius: 10px;
   background: var(--backgroundTheme3VeryDarkViolet);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .calc-header {
@@ -63,7 +65,27 @@
   padding: 30px;
   border: none;
   outline: none;
-  background: var(--screenTheme1);
+  background: var(--toggleBackgroundTheme1);
+}
+.calc-amt-2 {
+  margin-bottom: 25px;
+}
+.calc-amt-2 input {
+  width: 500px;
+  padding: 30px;
+  border: none;
+  outline: none;
+  background: var(--backgroundTheme2GrayRed);
+}
+.calc-amt-3 {
+  margin-bottom: 25px;
+}
+.calc-amt-3 input {
+  width: 500px;
+  padding: 30px;
+  border: none;
+  outline: none;
+  background: var(--backgroundToggleTheme3DarkViolet);
 }
 input {
   border-radius: 10px;
