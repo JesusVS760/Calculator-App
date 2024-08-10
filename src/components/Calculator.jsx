@@ -7,6 +7,7 @@ const Calculator = ({ onSendData }) => {
   const [currentOperation, setCurrentOperation] = useState(null); // Track the current operation
   const [displayResult, setDisplayResult] = useState(false); // Track if we should display the result
   const [slider, setSlider] = useState(0);
+  const [keyboard, setKeyboard] = useState("");
 
   //used for callback function
 
@@ -14,12 +15,15 @@ const Calculator = ({ onSendData }) => {
     if (backgroundReceived === 0) {
       let background = "app-container";
       onSendData(background); // call the callback function with background data
-    } else if (backgroundReceived === 2) {
+      setKeyboard("calc-keyboard");
+    } else if (backgroundReceived === 1) {
       let background = "app-container-2";
       onSendData(background); // call the callback function with background data
+      setKeyboard("calc-keyboard-2");
     } else {
       let background = "app-container-3";
       onSendData(background); // call the callback function with background data
+      setKeyboard("calc-keyboard-3");
     }
   };
 
@@ -84,7 +88,7 @@ const Calculator = ({ onSendData }) => {
   }
 
   return (
-    <div className="calc-container">
+    <div className={keyboard}>
       <div className="calc-header">
         <div className="calc-header-title">
           <h3>Calc</h3>
@@ -96,7 +100,7 @@ const Calculator = ({ onSendData }) => {
           <div className="calc-theme-slider">
             <div className="slider-opt">
               <p onClick={() => handleSliderChange(0)}>1</p>
-              <p onClick={changeBackground}>2</p>
+              <p onClick={() => handleSliderChange(1)}>2</p>
               <p onClick={() => handleSliderChange(2)}>3</p>
             </div>
             <div className="input-slider">
