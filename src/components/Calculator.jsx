@@ -30,7 +30,7 @@ const Calculator = ({ onSendData }) => {
   function handleDelete() {
     if (displayResult) {
       // Reset display when the result is shown
-      setComp("");
+      // setComp("");
       setDisplayResult(false);
     } else {
       // Remove the last character from the input
@@ -41,7 +41,7 @@ const Calculator = ({ onSendData }) => {
   function handleOperation(operation) {
     if (currentOperation && comp) {
       const value = parseFloat(comp);
-      if (!isNaN(value)) {
+      if (value) {
         switch (currentOperation) {
           case "+":
             setResult(result + value);
@@ -59,7 +59,6 @@ const Calculator = ({ onSendData }) => {
             break;
         }
       }
-      setComp(""); // Clear input after the operation
     } else if (comp) {
       // Initialize result with the current input if no previous operation
       setResult(parseFloat(comp));
@@ -68,7 +67,7 @@ const Calculator = ({ onSendData }) => {
     setCurrentOperation(operation); // Set the current operation
     setDisplayResult(true);
   }
-
+  ///???
   function handleEquals() {
     handleOperation(comp);
   }

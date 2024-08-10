@@ -3,7 +3,7 @@ import Calculator from "./components/Calculator";
 import "./App.css";
 
 const App = () => {
-  const [background, setBackground] = useState(null);
+  const [background, setBackground] = useState("app-container");
 
   const handleChangeBackground = (backgroundFound) => {
     console.log(backgroundFound);
