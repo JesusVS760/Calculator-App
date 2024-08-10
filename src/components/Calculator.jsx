@@ -7,8 +7,9 @@ const Calculator = ({ onSendData }) => {
   const [currentOperation, setCurrentOperation] = useState(null); // Track the current operation
   const [displayResult, setDisplayResult] = useState(false); // Track if we should display the result
   const [slider, setSlider] = useState(0);
-  const [keyboard, setKeyboard] = useState("");
-  const [inputBackground, setInputBackground] = useState("");
+  const [keyboard, setKeyboard] = useState("calc-keyboard");
+  const [inputBackground, setInputBackground] = useState("calc-amt");
+  const [buttonStyle, setButtonStyle] = useState("calc-button");
   //used for callback function
 
   const changeBackground = (backgroundReceived) => {
@@ -17,16 +18,19 @@ const Calculator = ({ onSendData }) => {
       onSendData(background); // call the callback function with background data
       setKeyboard("calc-keyboard");
       setInputBackground("calc-amt");
+      setButtonStyle("calc-button");
     } else if (backgroundReceived === 1) {
       let background = "app-container-2";
       onSendData(background); // call the callback function with background data
       setKeyboard("calc-keyboard-2");
       setInputBackground("calc-amt-2");
+      setButtonStyle("calc-button-2");
     } else {
       let background = "app-container-3";
       onSendData(background); // call the callback function with background data
       setKeyboard("calc-keyboard-3");
       setInputBackground("calc-amt-3");
+      setButtonStyle("calc-button-3");
     }
   };
 
@@ -129,37 +133,37 @@ const Calculator = ({ onSendData }) => {
       </div>
       <div className={keyboard}>
         <div className="calc-options">
-          <div className="calc-button">
+          <div className={buttonStyle}>
             <button onClick={() => handleComp("7")}>7</button>
           </div>
-          <div className="calc-button">
+          <div className={buttonStyle}>
             <button onClick={() => handleComp("8")}>8</button>
           </div>
-          <div className="calc-button">
+          <div className={buttonStyle}>
             <button onClick={() => handleComp("9")}>9</button>
           </div>
           <div className="calc-button-operator del">
             <button onClick={handleDelete}>DEL</button>
           </div>
-          <div className="calc-button">
+          <div className={buttonStyle}>
             <button onClick={() => handleComp("4")}>4</button>
           </div>
-          <div className="calc-button">
+          <div className={buttonStyle}>
             <button onClick={() => handleComp("5")}>5</button>
           </div>
-          <div className="calc-button">
+          <div className={buttonStyle}>
             <button onClick={() => handleComp("6")}>6</button>
           </div>
           <div className="calc-button-operator">
             <button onClick={() => handleOperation("+")}>+</button>
           </div>
-          <div className="calc-button">
+          <div className={buttonStyle}>
             <button onClick={() => handleComp("1")}>1</button>
           </div>
-          <div className="calc-button">
+          <div className={buttonStyle}>
             <button onClick={() => handleComp("2")}>2</button>
           </div>
-          <div className="calc-button">
+          <div className={buttonStyle}>
             <button onClick={() => handleComp("3")}>3</button>
           </div>
           <div className="calc-button-operator">
@@ -168,7 +172,7 @@ const Calculator = ({ onSendData }) => {
           <div className="calc-button-operator">
             <button onClick={() => handleComp(".")}>.</button>
           </div>
-          <div className="calc-button">
+          <div className={buttonStyle}>
             <button onClick={() => handleComp("0")}>0</button>
           </div>
           <div className="calc-button-operator">
