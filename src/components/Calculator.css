@@ -37,6 +37,26 @@
   /* gap: 380px; */
   max-width: 500px;
 }
+.calc-header-2 {
+  color: var(--text2DarkGrayishYellow);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  gap: 280px;
+  /* gap: 380px; */
+  max-width: 500px;
+}
+.calc-header-3 {
+  color: var(--text3LightYellow);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  gap: 280px;
+  /* gap: 380px; */
+  max-width: 500px;
+}
 .calc-header-title {
   /* margin-right: auto; */
   font-family: inherit;

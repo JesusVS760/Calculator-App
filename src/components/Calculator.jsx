@@ -10,6 +10,7 @@ const Calculator = ({ onSendData }) => {
   const [keyboard, setKeyboard] = useState("calc-keyboard");
   const [inputBackground, setInputBackground] = useState("calc-amt");
   const [buttonStyle, setButtonStyle] = useState("calc-button");
+  const [headerStyle, setHeaderStyle] = useState("calc-header");
   //used for callback function
 
   const changeBackground = (backgroundReceived) => {
@@ -19,18 +20,21 @@ const Calculator = ({ onSendData }) => {
       setKeyboard("calc-keyboard");
       setInputBackground("calc-amt");
       setButtonStyle("calc-button");
+      setHeaderStyle("calc-header");
     } else if (backgroundReceived === 1) {
       let background = "app-container-2";
       onSendData(background); // call the callback function with background data
       setKeyboard("calc-keyboard-2");
       setInputBackground("calc-amt-2");
       setButtonStyle("calc-button-2");
+      setHeaderStyle("calc-header-2");
     } else {
       let background = "app-container-3";
       onSendData(background); // call the callback function with background data
       setKeyboard("calc-keyboard-3");
       setInputBackground("calc-amt-3");
       setButtonStyle("calc-button-3");
+      setHeaderStyle("calc-header-3");
     }
   };
 
@@ -78,7 +82,6 @@ const Calculator = ({ onSendData }) => {
     setCurrentOperation(operation); // Set the current operation
     setDisplayResult(true);
   }
-  ///???
   function handleEquals() {
     handleOperation(comp);
   }
@@ -96,7 +99,7 @@ const Calculator = ({ onSendData }) => {
 
   return (
     <div className="calc-wrapper">
-      <div className="calc-header">
+      <div className={headerStyle}>
         <div className="calc-header-title">
           <h3>Calc</h3>
         </div>
